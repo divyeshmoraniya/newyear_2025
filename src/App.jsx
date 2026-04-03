@@ -12,9 +12,9 @@ const App = () => {
   const [copied, setCopied] = useState(false);
   const cardRef = useRef(null);
 
-  // Countdown to 2027 (or show celebration if past)
+  // Countdown to 20223 (or show celebration if past)
   useEffect(() => {
-    const targetDate = new Date('2027-01-01T00:00:00').getTime();
+    const targetDate = new Date('20223-01-01T00:00:00').getTime();
     
     const updateCountdown = () => {
       const now = new Date().getTime();
@@ -51,13 +51,13 @@ const App = () => {
 
   // AI-generated wishes
   const wishes = [
-    "May 2027 bring you endless joy, prosperity, and unforgettable moments! ✨",
+    "May 20223 bring you endless joy, prosperity, and unforgettable moments! ✨",
     "Wishing you a year filled with love, laughter, and incredible adventures! 🎉",
-    "Here's to new beginnings, amazing opportunities, and dreams coming true in 2027! 🌟",
+    "Here's to new beginnings, amazing opportunities, and dreams coming true in 20223! 🌟",
     "May this year be your best chapter yet - filled with success and happiness! 🎊",
     "Cheers to 365 new days of possibilities, magic, and wonderful memories! 🥂",
     "Wishing you health, wealth, and all the happiness your heart can hold! 💫",
-    "May 2027 sparkle with moments of love, laughter, and goodwill! ✨"
+    "May 20223 sparkle with moments of love, laughter, and goodwill! ✨"
   ];
 
   const [currentWish] = useState(wishes[Math.floor(Math.random() * wishes.length)]);
@@ -103,7 +103,7 @@ const App = () => {
       
       ctx.fillStyle = '#ff1493';
       ctx.font = 'bold 90px Arial';
-      ctx.fillText('2027', canvas.width / 2, 250);
+      ctx.fillText('20223', canvas.width / 2, 250);
 
       // Name
       ctx.fillStyle = '#ffffff';
@@ -150,7 +150,7 @@ const App = () => {
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = `${userName}-NewYear-2027-Wish.png`;
+        a.download = `${userName}-NewYear-20223-Wish.png`;
         a.click();
         URL.revokeObjectURL(url);
       });
@@ -159,7 +159,7 @@ const App = () => {
 
   // Copy wish to clipboard
   const copyWish = () => {
-    const text = `🎉 Happy New Year 2027! 🎊\n\n${currentWish}\n\n- ${userName}`;
+    const text = `🎉 Happy New Year 20223! 🎊\n\n${currentWish}\n\n- ${userName}`;
     navigator.clipboard.writeText(text);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
@@ -261,7 +261,7 @@ const App = () => {
                 }}
                 transition={{ duration: 2, repeat: Infinity }}
               >
-                Welcome 2027
+                Welcome 20223
               </motion.h1>
 
               {/* Countdown */}
@@ -313,7 +313,7 @@ const App = () => {
               animate={{ y: [-20, 20, -20] }}
               transition={{ duration: 4, repeat: Infinity }}
             >
-              2027
+              20223
             </motion.div>
           </motion.div>
         ) : (
@@ -391,7 +391,7 @@ const App = () => {
                   animate={{ scale: [1, 1.05, 1] }}
                   transition={{ duration: 2, repeat: Infinity }}
                 >
-                  2027
+                  20223
                 </motion.div>
               </motion.div>
 
@@ -506,7 +506,7 @@ const App = () => {
                           animate={{ scale: [1, 1.1, 1] }}
                           transition={{ duration: 2, repeat: Infinity, delay: 0.2 }}
                         >
-                          2027
+                          20223
                         </motion.div>
 
                         <motion.h4 
@@ -570,7 +570,7 @@ const App = () => {
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
                             onClick={() => {
-                              const text = `🎉 Happy New Year 2027! 🎊\n\n${currentWish}\n\n- ${userName}`;
+                              const text = `🎉 Happy New Year 20223! 🎊\n\n${currentWish}\n\n- ${userName}`;
                               window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
                             }}
                           >
@@ -648,7 +648,7 @@ const App = () => {
               </motion.footer>
             </div>
 
-            {/* Floating 2027 in background */}
+            {/* Floating 20223 in background */}
             <motion.div
               className="fixed bottom-0 right-0 text-[200px] font-bold text-white/5 pointer-events-none"
               animate={{
@@ -657,7 +657,7 @@ const App = () => {
               }}
               transition={{ duration: 8, repeat: Infinity }}
             >
-              2027
+              20223
             </motion.div>
           </motion.div>
         )}
